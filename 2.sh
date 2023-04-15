@@ -1,0 +1,18 @@
+CONSIDER_BELOW=4000000
+
+PREV_FIB=1
+CURRENT_FIB=2
+SUM=0
+
+while [ $CURRENT_FIB -le $CONSIDER_BELOW ]
+do
+    if [ $((CURRENT_FIB % 2)) -eq 0 ]
+    then
+        SUM=$((SUM + CURRENT_FIB))
+    fi
+    TMP=$CURRENT_FIB
+    CURRENT_FIB=$((CURRENT_FIB + PREV_FIB))
+    PREV_FIB=$TMP
+done
+
+echo $SUM
