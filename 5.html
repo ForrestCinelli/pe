@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: center;
+    }
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+<title>Project Euler Question 5 Solution</title>
+</head>
+
+<h1>Question</h1>
+
+<p><a href='https://projecteuler.net/problem=5'>Project Euler question 5, Smallest Multiple</a>:</p>
+
+<p>2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.</p>
+
+<p>What is the smallest positive number that is <i>evenly divisible</i> by all of the numbers from 1 to 20?</p>
+
+<hr>
+<h1>Answer</h1>
+
+<p>The smallest number that is evenly divisible by every number from 1 to 20 is the number which has all of their prime factors, without any duplicates. For example, since 16 = 2^4, the answer must contain the prime factors 2^4; and while 8 has three factors of 2, those would duplicate the factors of 16 and so do not need to be included.</p>
+
+<p>Below, find a table of prime factorizations for the first twenty natural numbers:</p>
+
+<table>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2^2</td>
+    <td>5</td>
+    <td>2 * 3</td>
+    <td>7</td>
+    <td>2^3</td>
+    <td>3^2</td>
+    <td>2 * 5</td>
+    <td>11</td>
+    <td>2 * 2 * 3</td>
+    <td>13</td>
+    <td>2 * 7</td>
+    <td>3 * 5</td>
+    <td>2^4</td>
+    <td>17</td>
+    <td>2 * 3^2</td>
+    <td>19</td>
+    <td>2 * 2 * 5</td>
+  </tr>
+</table>
+
+<p>Accounting for duplicates, we have prime factors 2^4, 3^2, 5, 7, 11, 13, 17, and 19. Their product is <span id='mult_result' style='font-weight:bold'></span>.</p>
+
+<script type='text/javascript'>
+    function multiply() {
+        const result = Math.pow(2, 4) * Math.pow(3, 2) * 5 * 7 * 11 * 13 * 17 * 19;
+        document.getElementById('mult_result').innerText = result.toString();
+    }
+    window.onload = multiply();
+</script>
+
+</html>
