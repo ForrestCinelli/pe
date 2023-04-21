@@ -41,7 +41,7 @@ class Seven
         for (int i = 0; i <= lastIdxCheck; i += 1)
         {
             int iValue = fromIdx(i);
-            for (int j = 0; iValue * (iValue + fromIdx(j)) < limit; j += 1)
+            for (int j = 0; iValue * fromIdx(i +j) < limit; j += 1)
             {
                 odds[toIdx(iValue * (fromIdx(i + j)))] = false;
             } 
