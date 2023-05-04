@@ -21,9 +21,9 @@ import (
     "fmt"
 )
 
-// Lemma 1: Given a natural number n, n + 1 shares no prime factors with it.
+// Lemma 1: Given a natural number n > 2, n + 1 shares no prime factors with it.
 // Proof:   Prime numbers are greater than 1. If a prime number divides two numbers s and t, then we can write s = t + ax, where a is an integer.
-//          But, there does not exist an integer a and a prime p (greater than 1) such that ap = 1.
+//          But, there does not exist an integer a and a prime p (other than 2) such that ap = 1.
 
 // Lemma 2: Let F(n) be the set of divisors of n, including 1. Given a number n = xy where x and y share no prime factors, then F(n) = S = { ij | i in F(x) and j in F(y) }.
 // Proof:   Let d be a divisor of n, then assume (seeking contradiction) that n is not in S. Because n = xy, d must draw its prime factors from either x or y. 
@@ -33,7 +33,7 @@ import (
 
 // Lemma 3: Let F(n) be the set of divisors of n, including 1. Given a number n = xy where x and y share no prime factors, |F(n)| = |F(x)||F(y)|
 // Proof:   Observe that the union of F(x) and F(y) is {1}. 
-//          Let d in F(n). We know from lemma 3 that d = d_x * d_y where d_x in F(x) and d_y in F(y). 
+//          Let d in F(n). We know from lemma 2 that d = d_x * d_y where d_x in F(x) and d_y in F(y). 
 //          Because x and y share no prime factors, there cannot exist d_x' and d_y' such that d_x' * d_y' = d but d_x' does not equal d_x or d_y' does not equal d_y. 
 //          Therefore, each element of F(n) corresponds to exactly one pair of elements from F(x) and F(y). 
 
