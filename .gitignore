@@ -2,3 +2,6 @@
 *.js
 *.jar
 *.exe
+.DS_Store
+*.hi
+
