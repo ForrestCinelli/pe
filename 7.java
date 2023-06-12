@@ -3,7 +3,8 @@
  * What is the 10 001st prime number?
  */
 
-/** Compile: javac 7.java
+/** java 17
+ *  Compile: javac 7.java
  *  Run:     java Seven
  */
 class Seven
