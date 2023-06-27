@@ -4,4 +4,5 @@
 *.exe
 .DS_Store
 *.hi
+*.tasty
 
