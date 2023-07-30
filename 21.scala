@@ -7,6 +7,7 @@
  * Evaluate the sum of all the amicable numbers under 10000.
  */
 
+// scala 3.3
 // scalac 21.scala
 // scala Main
 object Main {
