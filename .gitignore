@@ -5,4 +5,8 @@
 .DS_Store
 *.hi
 *.tasty
+27/lib
+27/bin
+27/pyvenv.cfg
+27/share
 
