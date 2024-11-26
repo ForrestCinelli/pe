@@ -13,7 +13,7 @@ Find the sum of all the numbers that can be written as the sum of fifth powers o
 """
 
 def digits(n: int) -> list[int]:
-    return [int(c) for c in str(n)]
+    return (int(c) for c in str(n))
 
 def is_fivepow_sum(n: int) -> bool:
     return n == sum([d**5 for d in digits(n)])
